@@ -56,8 +56,7 @@ public class Main
 		}
 	}
 	
-	public static int getSum(int i) 
-    { 
+	public static int getSum(int i) { 
         int sum = 0;
         i++; 
         while(i > 0) { 
@@ -71,8 +70,7 @@ public class Main
         return getSum(b) - getSum(a - 1);
     }
     
-    public static void updateFenwick(int n, int i, int val) 
-    { 
+    public static void updateFenwick(int n, int i, int val) { 
         i++; 
         while(i <= n) {
             fenwick[i] += val;
@@ -80,8 +78,7 @@ public class Main
         }
     }
     
-    public static void constructFenwick(int arr[], int n) 
-    {
+    public static void constructFenwick(int arr[], int n) {
         fenwick = new int[n + 1];
         for(int i = 0; i < n; i++) 
             updateFenwick(n, i, arr[i]); 
